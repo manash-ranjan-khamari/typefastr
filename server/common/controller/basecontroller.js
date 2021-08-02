@@ -1,5 +1,8 @@
+const {StatusCodes} = require('http-status-codes');
 class BaseController {
-    constructor() {}
+    constructor() {
+        this.StatusCodes = StatusCodes;
+    }
 
     sendApiResponse({res, status, model}) {
         // for non 500 we should log as well, not doing it as the scope will increase 

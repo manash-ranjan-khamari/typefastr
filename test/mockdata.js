@@ -1,22 +1,17 @@
 module.exports = {
-    addTodoList: {
+    joinChallenge: {
         singleName: {
-            title: 'A'
+            identifier: 'A'
         },
         largeName: {
-            title: 'ADFGHJK RTYUJBVCXJHGF RTYUKBGFDFGHJKJHGFD TYUIKGFDFGHJHGF ERTYJKJHGFDSXCVBNBVC UOYTYU RTYUGF TYUIUYGA ADFGHJK RTYUJBVCXJHGF RTYUKBGFDFGHJKJHGFD TYUIKGFDFGHJHGF ERTYJKJHGFDSXCVBNBVC UOYTYU RTYUGF TYUIUYGA ADFGHJK RTYUJBVCXJHGF RTYUKBGFDFGHJKJHGFD TYUIKGFDFGHJHGF ERTYJKJHGFDSXCVBNBVC UOYTYU RTYUGF TYUIUYGA'
+            identifier: 'ADFGHJK RTYUJBVCXJHGF RTYUKBGFDFGHJKJHGFD TYUIKGFDFGHJHGF ERTYJKJHGFDSXCVBNBVC UOYTYU RTYUGF TYUIUYGA ADFGHJK RTYUJBVCXJHGF RTYUKBGFDFGHJKJHGFD TYUIKGFDFGHJHGF ERTYJKJHGFDSXCVBNBVC UOYTYU RTYUGF TYUIUYGA ADFGHJK RTYUJBVCXJHGF RTYUKBGFDFGHJKJHGFD TYUIKGFDFGHJHGF ERTYJKJHGFDSXCVBNBVC UOYTYU RTYUGF TYUIUYGA'
         },
-        smallDescription: {
-            title: 'Travel World',
-            description: 'I Want to Travel'
-        },
-        legitProduct: {
-            unitTest: true,
-            title: 'Travel World',
-            description: 'The plan is to travel as much as I can, till I die'
+        invalidUserId: {
+            identifier: 'https://www.gamify.com',
+            userId: 'hello'
         }
     },
-    addTask: {
+    updateChallenge: {
         singleName: {
             title: 'A'
         },

@@ -1,7 +1,8 @@
-const TodoListController = require('./server/todolist/controller/todolistcontroller.js');
-const TodoListValidator = require('./server/todolist/validator/todolistvalidator.js');
+const CompetitionController = require('./server/competition/controller/competitioncontroller.js');
+const CompetitionValidator = require('./server/competition/validator/competitionvalidator.js');
 const UserController = require('./server/user/controller/usercontroller.js');
 const UserValidator = require('./server/user/validator/uservalidator.js');
+const ChallengeController = require('./server/challenge/controller/challengecontroller.js');
 
 class Routes {
     _getMethodLoader(Obj, method) {
@@ -19,16 +20,12 @@ class Routes {
         app.get('/health', (req, res) => {
             res.send('Service is up.');
         });
-        app.post('/todolist', TodoListValidator.addTodoList, this._getMethodLoader(TodoListController, 'addTodoList'));
-        app.get('/todolist', TodoListValidator.getTodoList, this._getMethodLoader(TodoListController, 'getTodoListDetails'));
-        app.post('/todolist/task', TodoListValidator.addTask, this._getMethodLoader(TodoListController, 'addTask'));
-        app.post('/todolist/share', UserValidator.shareTodoList, this._getMethodLoader(UserController, 'shareTodoList'));
-        app.post('/user/task', UserValidator.addUserTask, this._getMethodLoader(UserController, 'addUserTask'));
-        app.put('/user/task', UserValidator.updateUserTask, this._getMethodLoader(UserController, 'updateUserTask'));
-        // app.get('/product/mostviewed', TodoListValidator.getMostViewed, this._getMethodLoader(TodoListController, 'addTask'));
-        // app.get('/product/:productId', TodoListValidator.getProduct, this._getMethodLoader(TodoListController, 'getProduct'));
-        // app.delete('/product/:productId', TodoListValidator.deleteProduct, this._getMethodLoader(TodoListController, 'deleteProduct'));
-
+        app.post('/competition', CompetitionValidator.joinCompetition, this._getMethodLoader(CompetitionController, 'joinCompetition'));
+        app.put('/competition', CompetitionValidator.updateCompetition, this._getMethodLoader(CompetitionController, 'updateCompetition'));
+        app.get('/competition/status', CompetitionValidator.getCompetitionStatus, this._getMethodLoader(CompetitionController, 'getCompetitionStatus'));
+        
+        app.get('/challenge', this._getMethodLoader(ChallengeController, 'getChallenge'));
+        
         app.get('*', (req, res) => {
             res.send('Final fallback');
         });
