@@ -27,7 +27,7 @@ Application Code Structure
 - app.js
     - Main file which kickstarts the application
 
-Application Information
+- Application Information
     - Application Code flow
         - All opeeration will happen in the tables
     - How to Run
@@ -39,10 +39,10 @@ Application Information
         - And all the CRUD operation & testing could happen in those table
         - Also can have the unit test run on pre-commit hook, so that no bad code can go w/o passing the unit-testing audit
 
-Postman Collection
-- https://www.getpostman.com/collections/2a38994c59b8bf5e29c6
+- Postman Collection
+    - https://www.getpostman.com/collections/2a38994c59b8bf5e29c6
 
-API Overview
+- API Overview
     - POST /competition
         - PARAM: url param in field identifier is must, userId is optional
         - Starts off the competition, insert data in to competition table, status of competition is Registered
@@ -68,4 +68,4 @@ API Overview
         - We can use this API as a polling API
         - This can be called from browser every 1 or 2s & should update the loser incase the competitor is done, something like a Game Over indicator 
 
-Unit Test preview attached
+- Unit Test preview attached
